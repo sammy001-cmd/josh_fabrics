@@ -5,7 +5,7 @@ services:
     buildCommand: "./build.sh"
     startCommand: "gunicorn joshproject.wsgi:application"
     envVars:
-      - key: DJANGO_SECRET_KEY
+      - key: django-insecure-3f&-#vy(d8df=$jtdbvmnnjc+sunzu3ayd%unmcn70r1$9!1pb
         generateValue: true
       - key: DJANGO_DEBUG
         value: False
