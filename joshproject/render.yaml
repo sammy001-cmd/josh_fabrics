@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: josh-tech-fabrics
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn joshproject.wsgi:application"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: False
