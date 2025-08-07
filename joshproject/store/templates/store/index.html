@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Josh Tech Fabrics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    {% comment %} <link rel="stylesheet" href="style.css" /> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'store/images/Untitled-1-removebg-preview (2).png' %}" type="image/x-icon" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Josh Tech Fabrics</h1>
+        <p>Your go-to spot for premium fabrics for any celebration!</p>
+        <a href="#contact" class="btn">Contact Us</a>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <p style="text-align: center; max-width: 800px; margin: auto">
+            At Josh Tech Fabrics, we believe <strong>style is confidence</strong>,
+            and confidence starts with the right fabric. Whether it’s a wedding,
+            birthday, naming ceremony, or special event, we’ve got you covered with
+            elegance.
+        </p>
+    </section>
+
+    <section id="fabrics">
+        <h2 class="section-title">Our Fabrics</h2>
+        <div class="fabrics-grid">
+        <div class="fabric-box">
+        <h4>Senator</h4>
+        <p>Timeless style for gents who stand out.</p>
+        <a href="{% url 'category_products' category_id=1 %}">View Products</a>
+    </div>
+            <div class="fabric-box">
+        <h4>Adire</h4>
+        <p>Traditional meets trendy in every thread.</p>
+        <a href="{% url 'category_products' category_id=3 %}">View Products</a>
+    </div>
+            <div class="fabric-box">
+        <h4>Cotton</h4>
+        <p>Soft, breathable, and perfect for any day.</p>
+        <a href="{% url 'category_products' category_id=4 %}">View Products</a>
+    </div>
+            <div class="fabric-box">
+        <h4>Lace</h4>
+        <p>Elegance and shine for your grandest moments.</p>
+        <a href="{% url 'category_products' category_id=5 %}">View Products</a>
+    </div>
+        </div>
+    </section>
+
+    <section id="why">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <ul class="why-us-list" style="
+        max-width: 600px;
+        margin: auto;
+        list-style: none;
+        padding-left: 0;
+        ">
+            <li>💎 High-quality, durable fabrics</li>
+            <li>📦 Stress-free shopping experience</li>
+            <li>🎯 Style options for all events</li>
+            <li>💬 Easy contact & delivery process</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact">
+            <p>📞 08088859362</p>
+            <p>📞 09165063015</p>
+            <!-- <a href="https://wa.me/2348088859362" class="btn" target="_blank">Chat on WhatsApp</a> -->
+                
+                <a href="https://wa.me/2349165063015" class="btn" target="_blank">Chat on WhatsApp</a>
+    </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Josh Tech Fabrics — Where elegance begins with fabric.</p>
+    </footer>
+
+    <script>
+        ScrollReveal().reveal("section", {
+            delay: 200,
+            duration: 1000,
+            distance: "50px",
+            origin: "bottom",
+            reset: true,
+        });
+    </script>
+</body>
+</html>

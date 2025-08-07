@@ -1,0 +1,35 @@
+<!-- filepath: c:\joshtech\joshproject\store\templates\store\product_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Products</title>
+    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>All Products</h1>
+            <a href="{% url 'home' %}" class="btn hero-btn">Back to Home</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="fabrics-grid">
+            {% for product in products %}
+                <div class="fabric-box">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" width="150" style="border-radius:10px;">
+                    <h4>{{ product.name }}</h4>
+                    <p style="font-weight:bold; color:#e67e22;">₦{{ product.price }}</p>
+                    <p>{{ product.description }}</p>
+                </div>
+            {% empty %}
+                <p>No products available.</p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer>
+        &copy; {{ now|date:"Y" }} Josh Tech Fabrics. All rights reserved.
+    </footer>
+</body>
+</html>

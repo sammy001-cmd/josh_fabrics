@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category.name }} Products</title>
+    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>{{ category.name }} Fabrics</h1>
+            <a href="{% url 'home' %}" class="btn hero-btn">Back to Home</a>
+        </div>
+    </header>
+
+    <section>
+        <h2 class="section-title">{{ category.name }} Products</h2>
+        <div class="fabrics-grid">
+            {% for product in products %}
+                <div class="fabric-box">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" width="150" style="border-radius:10px;">
+                    <h4>{{ product.name }}</h4>
+                    <p style="font-weight:bold; color:#e67e22;">₦{{ product.price }}</p>
+                    <p>{{ product.description }}</p>
+                </div>
+            {% empty %}
+                <p>No products in this category yet.</p>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer>
+        &copy; {{ now|date:"Y" }} Josh Tech Fabrics. All rights reserved.
+    </footer>
+</body>
+</html>
