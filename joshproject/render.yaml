@@ -1,11 +1,16 @@
 services:
   - type: web
-    name: josh-tech-fabrics
+    name: joshtech
     env: python
     buildCommand: "./build.sh"
     startCommand: "gunicorn joshproject.wsgi:application"
     envVars:
-      - key: django-insecure-3f&-#vy(d8df=$jtdbvmnnjc+sunzu3ayd%unmcn70r1$9!1pb
-        generateValue: true
-      - key: DJANGO_DEBUG
-        value: False
+      - key: DJANGO_SETTINGS_MODULE
+        value: joshproject.settings
+      - key: PYTHON_VERSION
+        value: 3.9
+      - fromDatabase:
+          name: joshtech-db
+          property: connectionString
+          key: DATABASE_URL
+    autoDeploy: true
