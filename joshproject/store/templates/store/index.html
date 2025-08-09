@@ -38,23 +38,23 @@
         <div class="fabric-box">
         <h4>Senator</h4>
         <p>Timeless style for gents who stand out.</p>
-        <a href="{% url 'category_products' category_id=1 %}">View Products</a>
-    </div>
-            <div class="fabric-box">
-        <h4>Adire</h4>
-        <p>Traditional meets trendy in every thread.</p>
-        <a href="{% url 'category_products' category_id=3 %}">View Products</a>
-    </div>
-            <div class="fabric-box">
-        <h4>Cotton</h4>
-        <p>Soft, breathable, and perfect for any day.</p>
-        <a href="{% url 'category_products' category_id=4 %}">View Products</a>
-    </div>
-            <div class="fabric-box">
-        <h4>Lace</h4>
-        <p>Elegance and shine for your grandest moments.</p>
-        <a href="{% url 'category_products' category_id=5 %}">View Products</a>
-    </div>
+        <button class="btn" onclick="window.location.href='{% url 'category_products' category_id=1 %}'">View Products</button>
+</div>
+<div class="fabric-box">
+    <h4>Adire</h4>
+    <p>Traditional meets trendy in every thread.</p>
+    <button class="btn" onclick="window.location.href='{% url 'category_products' category_id=3 %}'">View Products</button>
+</div>
+<div class="fabric-box">
+    <h4>Cotton</h4>
+    <p>Soft, breathable, and perfect for any day.</p>
+    <button class="btn" onclick="window.location.href='{% url 'category_products' category_id=4 %}'">View Products</button>
+</div>
+<div class="fabric-box">
+    <h4>Lace</h4>
+    <p>Elegance and shine for your grandest moments.</p>
+    <button class="btn" onclick="window.location.href='{% url 'category_products' category_id=5 %}'">View Products</button>
+</div>
         </div>
     </section>
 
